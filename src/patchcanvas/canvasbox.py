@@ -414,7 +414,7 @@ class CanvasBox(QGraphicsObject):
             connection.widget.setZValue(z_value)
 
     def triggerSignalPositionChanged(self):
-        self.positionChanged.emit(self.m_group_id, self.m_splitted, self.x(), self.y())
+        self.positionChanged.emit(self.m_group_id, self.m_splitted, int(self.x()), int(self.y()))
         self.m_will_signal_pos_change = False
 
     @pyqtSlot()
